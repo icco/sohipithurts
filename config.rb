@@ -1,13 +1,4 @@
 ###
-# Compass
-###
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
-###
 # Page options, layouts, aliases and proxies
 ###
 
@@ -24,7 +15,7 @@
 #   page "/admin/*"
 # end
 
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
+# Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
@@ -36,9 +27,16 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+activate :livereload
+activate :bower
+activate :autoprefixer
+
+set :slim, pretty: true
+
+# default directories
+#set :js_dir, 'javascripts'
+#set :css_dir, 'stylesheets'
+#set :images_dir, 'images'
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -46,12 +44,6 @@
 #     "Helping"
 #   end
 # end
-
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
