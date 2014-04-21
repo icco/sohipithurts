@@ -55,3 +55,12 @@ configure :build do
   # Enable cache buster
   activate :asset_hash
 end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.build_before = true 
+  # Optional Settings
+  # deploy.remote   = "custom-remote" # remote name or git url, default: origin
+  # deploy.branch   = "custom-branch" # default: gh-pages
+  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+end
