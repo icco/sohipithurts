@@ -1,5 +1,8 @@
+require 'rake/clean'
 
 task :default => :local
+
+CLEAN.include('build/', 'vendor/')
 
 task :update do
   Bundler.with_clean_env do
@@ -12,6 +15,6 @@ task :local => [:update] do
   Kernel.exec 'middleman'
 end
 
-task :deploy do
+task :deploy => :clean do
   Kernel.exec 'middleman deploy'
 end
