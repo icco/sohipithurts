@@ -1,4 +1,4 @@
-Crafty.init(500,350, document.getElementById('game'));
+Crafty.init(800, 600, 'game');
 
 Crafty.e('Floor, 2D, Canvas, Color')
   .attr({x: 0, y: 250, w: 250, h: 10})
