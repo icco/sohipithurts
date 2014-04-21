@@ -15,7 +15,7 @@ task :local => [:update] do
   Kernel.exec 'middleman'
 end
 
-task :deploy => [:clean, :update] do
+task :deploy do
   Kernel.exec 'middleman deploy'
 end
 
