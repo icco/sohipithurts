@@ -4,6 +4,7 @@
   "dependencies": {
     "pure": "~0.3.0",
     "modernizr": "~2.6.2",
-    "typeplate": "~1.1.2"
+    "typeplate": "~1.1.2",
+    "crafty": "~0.6.2"
   }
 }
