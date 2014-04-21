@@ -9,11 +9,12 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "So Hip, It Hurts." %></title>
 
-    <%= stylesheet_link_tag "normalize", "all" %>
-    <%= javascript_include_tag "all" %>
+    <%= stylesheet_link_tag "all" %>
   </head>
 
   <body class="<%= page_classes %>">
     <%= yield %>
+
+    <%= javascript_include_tag "all" %>
   </body>
 </html>

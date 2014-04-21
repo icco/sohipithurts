@@ -1,3 +1,6 @@
+
+task :default => :local
+
 task :update do
   Bundler.with_clean_env do
     system "bundle update"
